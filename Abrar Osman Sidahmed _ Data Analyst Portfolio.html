@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abrar Osman Sidahmed | Data Analyst Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#231123;--gold:#BFAC22;--plum:#82204A;--mauve:#60495A;--rose:#945D5E;--text:#f6eef3;--muted:#cdb9c6;--card:#2e1830;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,sans-serif;line-height:1.6}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(35,17,35,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--mauve)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.logo{font-weight:800;font-size:1.15rem;text-decoration:none}.logo b{color:var(--gold)}
+nav div{display:flex;gap:8px}
+nav a.l{text-decoration:none;padding:8px 18px;border-radius:99px;font-weight:600;font-size:.9rem;color:var(--muted)}
+nav a.l.on{background:var(--plum);color:#fff}
+main{max-width:1080px;margin:0 auto;padding:40px 5vw 70px}
+.page{display:none}.page.on{display:block;animation:f .4s}
+@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:30px 0 50px}
+.pill{display:inline-block;background:rgba(191,172,34,.15);color:var(--gold);padding:5px 14px;border-radius:99px;font-size:.8rem;font-weight:600}
+h1{font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.1;margin:14px 0;font-weight:800}
+h1 span{background:linear-gradient(90deg,var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:1.6rem;margin:50px 0 18px}h2 i{font-style:normal;color:var(--gold)}
+p.lead{color:var(--muted);font-size:1.05rem;max-width:560px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:99px;margin:6px 8px 0 0;font-size:.95rem}
+.btn.p{background:var(--gold);color:var(--bg)}.btn.s{border:2px solid var(--rose)}
+.portrait{aspect-ratio:1;border-radius:28px;background:linear-gradient(145deg,var(--plum),var(--mauve));display:grid;place-items:center;font-size:5rem;font-weight:800;color:var(--gold);border:2px solid var(--rose);max-width:320px;justify-self:center;width:100%}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.stat{background:var(--card);border:1px solid var(--mauve);border-radius:20px;padding:20px}
+.stat b{display:block;font-size:2rem;color:var(--gold);font-weight:800;line-height:1.1}.stat small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--mauve);border-radius:22px;padding:24px}
+.card h3{margin:0 0 4px;font-size:1.05rem}.card .when{color:var(--rose);font-size:.82rem;font-weight:600}
+.card ul{padding-left:18px;margin:10px 0 0;color:var(--muted);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--mauve);padding:6px 14px;border-radius:99px;font-size:.84rem;font-weight:500}
+.chip.g{background:var(--plum)}
+/* projects */
+.proj{background:linear-gradient(180deg,var(--card),#27142a);border:1px solid var(--mauve);border-radius:28px;padding:30px;margin:0 0 34px}
+.proj header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start}
+.proj h3{font-size:1.6rem;margin:6px 0 10px;font-weight:700}
+.lab{color:var(--gold);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin:26px 0 10px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.step{background:var(--bg);border:1px dashed var(--rose);border-radius:20px;padding:18px;text-align:center}
+.step svg{width:64px;height:64px;margin-bottom:6px}
+.step h4{margin:0 0 4px;color:var(--gold);font-size:.95rem}.step p{margin:0;font-size:.88rem;color:var(--muted)}
+.shot{border:2px dashed var(--rose);border-radius:20px;min-height:200px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(148,93,94,.07) 14px 28px);font-size:.9rem}
+.shot img{max-width:100%;border-radius:14px}
+.find{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.find li{background:rgba(130,32,74,.28);border-left:4px solid var(--gold);padding:12px 16px;border-radius:0 14px 14px 0;font-size:.94rem}
+footer{border-top:1px solid var(--mauve);padding:26px 5vw;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.portrait{max-width:200px;order:-1}.proj{padding:20px}}
+h1,h2,.proj h3,.logo{font-family:'Plus Jakarta Sans','Poppins',sans-serif;letter-spacing:-.035em;font-stretch:normal}
+h1{line-height:1.08;font-weight:800}
+h1 span{display:inline-block;background-image:linear-gradient(90deg,var(--gold),var(--plum),var(--rose),var(--gold));background-size:300% 100%;animation:sh 6s ease-in-out infinite alternate;transition:opacity .35s,transform .35s}
+h1 span.out{opacity:0;transform:translateY(14px)}
+@keyframes sh{to{background-position:100% 0}}
+h2 i{text-decoration:underline wavy var(--plum);text-underline-offset:8px}
+main{position:relative;z-index:1}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.35;z-index:0;pointer-events:none;animation:bl 14s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:var(--plum);top:-100px;left:-120px}
+.b2{width:380px;height:380px;background:var(--gold);opacity:.14;bottom:-120px;right:-100px;animation-delay:-6s}
+@keyframes bl{to{transform:translate(70px,50px) scale(1.2)}}
+.hero>*{animation:up .8s both}.hero>*:nth-child(2){animation-delay:.25s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+.portrait{animation:up .8s both,fl 6s ease-in-out infinite;overflow:hidden}
+.portrait svg{width:90%;height:90%}.bar{transform-box:fill-box;transform-origin:bottom;animation:gr 2.2s ease-in-out infinite alternate}
+@keyframes gr{from{transform:scaleY(.3)}}
+.dot{animation:fl 4s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px) rotate(1.5deg)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.card:hover,.stat:hover,.step:hover{transform:translateY(-6px);border-color:var(--gold)}
+.step svg{animation:wb 4s ease-in-out infinite}
+@keyframes wb{50%{transform:rotate(-6deg) scale(1.08)}}
+.mq{overflow:hidden;margin:34px 0 0;border-block:1px solid var(--mauve);padding:12px 0;display:flex;white-space:nowrap}
+.mq div{animation:mq 22s linear infinite;padding-right:2rem;font:800 1.3rem 'Plus Jakarta Sans',sans-serif;color:var(--rose);flex:none}
+@keyframes mq{to{transform:translateX(-100%)}}
+.sn{display:block;text-decoration:none}.sn svg{width:56px;height:56px}
+.sn b{display:block;font:800 2rem 'Plus Jakarta Sans',sans-serif;color:var(--gold);margin-top:10px}
+.sn small,.sn p{color:var(--muted)}.sn p{font-size:.9rem}.go{color:var(--gold);font-weight:700}
+.shot img{max-width:100%;border-radius:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-q" viewBox="0 0 64 64"><circle cx="28" cy="28" r="16" fill="none" stroke="#BFAC22" stroke-width="5"/><path d="M40 40l16 16" stroke="#945D5E" stroke-width="6" stroke-linecap="round"/><path d="M22 28h12M28 22v12" stroke="#82204A" stroke-width="4" stroke-linecap="round"/></symbol>
+<symbol id="i-g" viewBox="0 0 64 64"><circle cx="24" cy="30" r="11" fill="none" stroke="#BFAC22" stroke-width="6" stroke-dasharray="7 4"/><circle cx="46" cy="42" r="8" fill="none" stroke="#945D5E" stroke-width="5" stroke-dasharray="5 3"/><circle cx="24" cy="30" r="3" fill="#82204A"/></symbol>
+<symbol id="i-b" viewBox="0 0 64 64"><rect x="8" y="36" width="10" height="20" rx="3" fill="#60495A"/><rect x="24" y="24" width="10" height="32" rx="3" fill="#945D5E"/><rect x="40" y="10" width="10" height="46" rx="3" fill="#BFAC22"/><path d="M8 24l16-10 16 6 14-12" fill="none" stroke="#82204A" stroke-width="3.5" stroke-linecap="round"/></symbol>
+</defs>
+</svg>
+
+<nav>
+<a class="logo" href="#about">Abrar<b>.</b>data</a>
+<div><a class="l" href="#about" data-p="about">About</a><a class="l" href="#projects" data-p="projects">Projects</a></div>
+</nav>
+
+<div class="blob b1"></div><div class="blob b2"></div><main>
+<!-- ABOUT -->
+<section class="page" id="about">
+<div class="hero">
+<div>
+
+<h1>I turn messy data into <span id="w">clear stories</span>.</h1>
+<p class="lead">Data analyst skilled in SQL, Python, Power BI and Looker Studio. I clean and combine data from different sources, build dashboards, and turn the results into recommendations people can act on.</p>
+<a class="btn p" href="#projects">See my projects</a>
+<a class="btn s" href="mailto:abrar.o.sidahmed@gmail.com">Email me</a>
+</div>
+<div class="portrait" aria-label="Data dashboard illustration"><svg viewBox="0 0 300 300" role="img"><rect x="26" y="46" width="248" height="196" rx="20" fill="#231123" stroke="#BFAC22" stroke-width="3"/><circle cx="48" cy="68" r="6" fill="#945D5E"/><circle cx="66" cy="68" r="6" fill="#BFAC22"/><circle cx="84" cy="68" r="6" fill="#82204A"/><path d="M26 86h248" stroke="#60495A" stroke-width="2"/><rect class="bar" x="48" y="150" width="22" height="72" rx="5" fill="#60495A"/><rect class="bar" style="animation-delay:-.5s" x="80" y="124" width="22" height="98" rx="5" fill="#945D5E"/><rect class="bar" style="animation-delay:-1s" x="112" y="104" width="22" height="118" rx="5" fill="#BFAC22"/><rect class="bar" style="animation-delay:-1.5s" x="144" y="136" width="22" height="86" rx="5" fill="#82204A"/><circle cx="222" cy="140" r="28" fill="none" stroke="#60495A" stroke-width="14"/><circle cx="222" cy="140" r="28" fill="none" stroke="#BFAC22" stroke-width="14" stroke-dasharray="105 176" transform="rotate(-90 222 140)"/><circle cx="222" cy="140" r="28" fill="none" stroke="#82204A" stroke-width="14" stroke-dasharray="40 176" stroke-dashoffset="-105" transform="rotate(-90 222 140)"/><path d="M190 200h64M190 214h44" stroke="#945D5E" stroke-width="5" stroke-linecap="round"/><circle class="dot" cx="246" cy="232" r="30" fill="rgba(191,172,34,.18)" stroke="#BFAC22" stroke-width="7"/><path d="M268 254l22 22" class="dot" stroke="#945D5E" stroke-width="10" stroke-linecap="round"/><circle class="dot" cx="36" cy="28" r="5" fill="#BFAC22"/><circle class="dot" cx="262" cy="28" r="4" fill="#945D5E"/><circle class="dot" cx="20" cy="270" r="4" fill="#82204A"/></svg></div>
+</div>
+
+<div class="stats">
+<div class="stat"><b>+250–400%</b><small>growth in qualified leads per week (2 → 7–10)</small></div>
+<div class="stat"><b>4.00</b><small>GPA, B.S. Honors in Management Information Systems</small></div>
+<div class="stat"><b>10,000+</b><small>order records cleaned with SQL</small></div>
+<div class="stat"><b>200+</b><small>students taught as a public speaker</small></div>
+</div>
+
+<div class="mq"><div>SQL ✦ Python ✦ Power BI ✦ Looker Studio ✦ Excel ✦ Power Query ✦ Dashboards ✦ ETL ✦ </div><div aria-hidden="true">SQL ✦ Python ✦ Power BI ✦ Looker Studio ✦ Excel ✦ Power Query ✦ Dashboards ✦ ETL ✦ </div></div>
+<h2>My <i>toolkit</i></h2>
+<div class="chips">
+<span class="chip g">SQL</span><span class="chip g">Python</span><span class="chip g">Power BI</span><span class="chip g">Looker Studio</span><span class="chip g">Excel &amp; Power Query</span>
+<span class="chip">Google Analytics</span><span class="chip">Google Ads</span><span class="chip">Meta Ads Manager</span><span class="chip">Azure</span><span class="chip">Slack</span><span class="chip">Coda</span><span class="chip">Notion</span><span class="chip">Arabic (native)</span><span class="chip">English (proficient)</span>
+</div>
+
+<h2>My <i>journey</i></h2>
+<div class="grid">
+<div class="card"><h3>Data Analyst · Shaqaf Agency</h3><div class="when">Sep 2025 – Present · Remote</div><ul><li>Found 40% of campaign respondents were not qualified, then changed Google Ads keywords and messaging to reach senior decision-makers.</li><li>Analyzed Saudi market trends and recommended moving into Real Estate.</li><li>Built Looker Studio dashboards combining several data sources.</li></ul></div>
+<div class="card"><h3>Growth &amp; Marketing Analyst · Circles Health</h3><div class="when">Feb – May 2025 · Remote</div><ul><li>Switched ads from 1-minute to 15-second videos using Meta data.</li><li>Found a post-signup drop-off and designed a daily reminder feature.</li><li>Ran growth sprints in Agile and tracked KPIs in Coda.</li></ul></div>
+<div class="card"><h3>Learning &amp; Development Officer · SUDAP</h3><div class="when">May – Oct 2024 · Remote</div><ul><li>Built learner engagement dashboards and used them to choose new coaches.</li><li>Opened the Egypt market through a partnership with an elementary school.</li></ul></div>
+<div class="card"><h3>Project Coordinator · TutiPay FinTech</h3><div class="when">Aug 2022 – Aug 2023 · Khartoum</div><ul><li>Designed a Go-to-Market plan after finding “familiarity bias” in competitor apps.</li><li>Recommended university students as early adopters.</li></ul></div>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="page" id="projects">
+<span class="pill">Case studies</span>
+<h1>Projects, told as <span>stories</span>.</h1>
+<p class="lead">A quick snapshot of each project. Click one to read the full story.</p>
+<div id="list" class="grid" style="margin-top:34px"></div>
+</section>
+<section class="page" id="case"><a class="btn s" href="#projects">← All projects</a><div id="cases" style="margin-top:20px"></div></section></main>
+
+<footer>© 2026 Abrar Osman Sidahmed · abrar.o.sidahmed@gmail.com · Khartoum, Sudan</footer>
+
+<script>
+var P=[
+{t:"E-Commerce Sales Dashboard",tag:"ETL + Looker Studio",tools:["SQL","Excel","Google Sheets","Looker Studio"],
+s:[["The problem","10,000+ raw order records, scattered and hard to read for decision-making."],["The process","Cleaned and summarized with SQL, moved through Excel and Google Sheets, then loaded into Looker Studio (extract, clean, load)."],["The solution","A dashboard with a sales map, category and city charts, and filters by state, region and city."]],
+n:[["10,000+","order records"],["3","filters: state, region, city"],["1","interactive dashboard"]],
+f:["Add your headline insight here, for example the top category or the strongest region.","Add a second finding, for example a city that under-performs."],
+x:["SQL queries","Cleaned dataset","Dashboard link"]},
+{t:"Survey Analytics Dashboard",tag:"Power Query + Power BI",tools:["Power Query","Power BI"],
+s:[["The problem","630 messy survey responses about salary, satisfaction and how hard it is to enter the field."],["The process","Cleaned the responses with Power Query and structured them for analysis."],["The solution","A Power BI dashboard that makes salary, satisfaction and entry difficulty easy to compare."]],
+n:[["630","responses analysed"],["3","themes: salary, satisfaction, entry difficulty"],["1","Power BI report"]],
+f:["Add your key finding on salary here.","Add your key finding on satisfaction or entry difficulty here."],
+x:["Cleaning steps","DAX measures","Report link"]},
+{t:"Baby Care Sales Review",tag:"Excel dashboard",tools:["Excel"],
+s:[["The problem","About 600 raw sales rows with missing headers and inconsistent categories."],["The process","Added headers, standardized categories, and calculated year-over-year growth by brand."],["The solution","An Excel dashboard with filters so executives can compare brands quickly."]],
+n:[["~600","sales rows cleaned"],["YoY","growth by brand"],["1","Excel dashboard"]],
+f:["Add the fastest-growing brand here.","Add the brand that declined, and why it matters."],
+x:["Raw vs. clean data","Dashboard file"]},
+{t:"Market Research for Financial Inclusion",tag:"Research · TutiPay FinTech",tools:["Market research","Survey design"],
+s:[["The problem","Underbanked communities were not being reached by existing digital financial services."],["The process","Led a study at TutiPay FinTech to identify market gaps."],["The solution","Actionable insights that shaped service enhancements and digital wallet adoption strategies."]],
+n:[["1","market-gap study"],["Wallets","digital adoption focus"],["Go-to-Market","plan delivered"]],
+f:["Add the main gap you found.","Add the recommendation that was adopted."],
+x:["Research report","Presentation"]},
+{t:"Plant Identification Mobile App",tag:"Python · Django · SQL",tools:["Python","Django","SQL"],
+s:[["The problem","Plant information is hard for people to access."],["The process","Extensive market research, then a backend built with Python, Django and SQL."],["The solution","A mobile app that identifies plants. It won the Best Graduation Research Award in General Management."]],
+n:[["🏆","Best Graduation Research Award"],["Django","backend framework"],["SQL","data layer"]],
+f:["Add how the app identifies a plant, in one sentence.","Add a user-testing result if you have one."],
+x:["App screenshots","Demo video","GitHub repo"]}
+];
+var ic=["i-q","i-g","i-b"];
+function R(){document.getElementById("cases").innerHTML=P.map(function(p,k){
+return '<article class="proj" data-k="'+k+'" hidden><header><div><span class="pill">'+p.tag+'</span><h3>'+p.t+'</h3></div><div class="chips">'+p.tools.map(function(x){return '<span class="chip g">'+x+'</span>'}).join("")+'</div></header>'+
+'<div class="lab">The story</div><div class="steps">'+p.s.map(function(s,i){return '<div class="step"><svg><use href="#'+ic[i]+'"/></svg><h4>'+s[0]+'</h4><p>'+s[1]+'</p></div>'}).join("")+'</div>'+
+'<div class="lab">Data snapshot</div><div class="stats" style="margin-bottom:14px">'+p.n.map(function(n){return '<div class="stat"><b>'+n[0]+'</b><small>'+n[1]+'</small></div>'}).join("")+'</div>'+
+'<div class="shot"><img src="images/'+(k+1)+'.png" alt="'+p.t+'" onerror="this.parentNode.innerHTML=\'Add images/'+(k+1)+'.png to show your screenshot here\'"></div>'+
+'<div class="lab">Findings</div><ul class="find">'+p.f.map(function(f){return '<li>'+f+'</li>'}).join("")+'</ul>'+
+'<div class="lab">Project files &amp; links</div><div class="chips">'+p.x.map(function(x){return '<a class="chip" href="#projects">↗ '+x+'</a>'}).join("")+'<a class="btn p" style="margin:0 0 0 6px;padding:7px 20px" href="#projects">View project files →</a></div></article>'}).join("");document.getElementById("list").innerHTML=P.map(function(p,k){return '<a class="card sn" href="#p-'+k+'"><svg><use href="#'+ic[k%3]+'"/></svg><span class="pill">'+p.tag+'</span><h3>'+p.t+'</h3><b>'+p.n[0][0]+'</b><small>'+p.n[0][1]+'</small><p>'+p.s[0][1]+'</p><span class="go">Read the story →</span></a>'}).join("")}
+function go(){var h=(location.hash||"#about").slice(1),c=/^p-\d+$/.test(h)?+h.slice(2):-1;if(c>=0&&P[c]){document.querySelectorAll(".proj").forEach(function(a){a.hidden=+a.dataset.k!==c});h="case"}else if(h!=="projects")h="about";
+document.querySelectorAll(".page").forEach(function(e){e.classList.toggle("on",e.id===h)});
+document.querySelectorAll("nav a.l").forEach(function(a){a.classList.toggle("on",a.dataset.p===(h==="case"?"projects":h))});window.scrollTo(0,0)}
+R();var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".card,.stat,.step,.find li,.shot").forEach(function(e){e.classList.add("rv");io.observe(e)});
+var W=["clear stories","smart decisions","visual insights","real growth"],wi=0,ws=document.getElementById("w");
+setInterval(function(){ws.classList.add("out");setTimeout(function(){wi=(wi+1)%4;ws.textContent=W[wi];ws.classList.remove("out")},350)},2800);
+addEventListener("hashchange",go);go();
+</script>
+</body>
+</html>
